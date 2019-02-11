@@ -19,7 +19,7 @@ public class TP_Semaphore {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        /*Semaphore s1 = new Semaphore(10);
+        Semaphore s1 = new Semaphore(10);
         Semaphore s2 = new Semaphore(0);
         
         int prod = 11;
@@ -39,8 +39,8 @@ public class TP_Semaphore {
         for(Consommateur c:consl){
             c.start();
         }
-        */
-        /*
+        
+        
         Semaphore s3= new Semaphore(0);
         int n = 10;
         List<RendezVous> rdv = new ArrayList();
@@ -50,7 +50,7 @@ public class TP_Semaphore {
         for(RendezVous r:rdv){
             r.start();
         }
-        */
+        
         Semaphore s4 = new Semaphore(1);
         int lecteur=10;
         int redacteur=10;
