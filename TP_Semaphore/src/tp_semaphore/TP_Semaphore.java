@@ -40,7 +40,7 @@ public class TP_Semaphore {
             c.start();
         }
         */
-        
+        /*
         Semaphore s3= new Semaphore(0);
         int n = 10;
         List<RendezVous> rdv = new ArrayList();
@@ -49,6 +49,24 @@ public class TP_Semaphore {
         }
         for(RendezVous r:rdv){
             r.start();
+        }
+        */
+        Semaphore s4 = new Semaphore(1);
+        int lecteur=10;
+        int redacteur=10;
+        List<Lecteur> lect = new ArrayList();
+        List<Redacteur> reda= new ArrayList();
+        for(int i=0; i<lecteur;i++){
+            lect.add(new Lecteur(s4));
+        }
+        for(int i=0; i<redacteur;i++){
+            reda.add(new Redacteur(s4));
+        }
+        for(Lecteur t:lect){
+            t.start();
+        }
+        for(Redacteur c:reda){
+            c.start();
         }
     }
     
